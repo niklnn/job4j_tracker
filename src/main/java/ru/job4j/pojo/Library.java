@@ -13,22 +13,19 @@ public class Library {
         books[3] = chemistry;
         System.out.println("Book list:");
         for (int i = 0; i < books.length; i++) {
-            Book book = books[i];
-            System.out.println("Position : " + i + ", name: " + book.getName() + ", pages: " + book.getCount());
+            System.out.println("Position : " + i + ", name: " + books[i].getName() + ", pages: " + books[i].getCount());
         }
         System.out.println("Change book position 0 to book position 3");
         Book temp = books[0];
         books[0] = books[3];
         books[3] = temp;
         for (int i = 0; i < books.length; i++) {
-            Book book = books[i];
-            System.out.println("Position : " + i + ", name: " + book.getName() + ", pages: " + book.getCount());
+            System.out.println("Position : " + i + ", name: " + books[i].getName() + ", pages: " + books[i].getCount());
         }
         System.out.println("Book called Clean code");
         for (int i = 0; i < books.length; i++) {
-            Book book = books[i];
-            if (book.getName().equals("Clean code")) {
-                System.out.println("Position : " + i + ", name: " + book.getName() + ", pages: " + book.getCount());
+            if ("Clean code".equals(books[i].getName())) {
+                System.out.println("Position : " + i + ", name: " + books[i].getName() + ", pages: " + books[i].getCount());
             }
         }
     }
