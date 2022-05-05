@@ -6,8 +6,8 @@ public class College {
         student.setFullName("Nikolai Nikolaevich");
         student.setGroup("Java");
         student.setDateOfAdmission(2022);
-        System.out.println(student.getFullName() + "\n"
-                        + student.getGroup() + "\n"
-                        + student.getDateOfAdmission());
+        System.out.println(student.getFullName()
+                + System.lineSeparator() + student.getGroup()
+                + System.lineSeparator() + student.getDateOfAdmission());
     }
 }
