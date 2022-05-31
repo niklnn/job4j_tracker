@@ -8,6 +8,7 @@ public class UserStore {
             if (login.equals(user.getUsername())) {
                 username = user.getUsername();
                 valid = user.isValid();
+                break;
             }
         }
         if (username == null) {
@@ -17,20 +18,20 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        boolean rsl = user.getUsername().length() >= 3 && user.isValid();
-        if (!rsl) {
+        if (user.getUsername().length() < 3 || !user.isValid()) {
             throw new UserInvalidException("User invalid");
+        } else {
+            return true;
         }
-        return true;
     }
 
     public static void main(String[] args) {
         User[] users = {
                 new User("Semen Semenych", true),
-                new User("Nik", true)
+                new User("Ni", true)
         };
         try {
-            User user = findUser(users, "Nik");
+            User user = findUser(users, "Ni");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
