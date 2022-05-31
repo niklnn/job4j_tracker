@@ -6,6 +6,7 @@ public class FindEl {
         for (int i = 0; i < value.length; i++) {
             if (key.equals(value[i])) {
                 rsl = i;
+                break;
             }
         }
         if (rsl == -1) {
@@ -15,9 +16,9 @@ public class FindEl {
     }
 
     public static void main(String[] args) {
-        String[] test = {"a", "b", "c", "d", "e"};
+        String[] test = {"a", "b", "c", "c", "e"};
         try {
-            int rsl = indexOf(test, "t");
+            int rsl = indexOf(test, "c");
             System.out.println(rsl);
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
